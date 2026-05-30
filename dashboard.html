@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>TaskFlow Dashboard</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="./css/dashboard.css"
+  >
+
+</head>
+
+<body>
+
+  <div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div>
+
+        <h1 class="logo">
+          TaskFlow
+        </h1>
+
+        <ul class="nav-links">
+
+          <li
+            class="active nav-item"
+            data-section="dashboardSection"
+          >
+            Dashboard
+          </li>
+
+          <li
+            class="nav-item"
+            data-section="tasksSection"
+          >
+            My Tasks
+          </li>
+
+        </ul>
+
+      </div>
+
+      <button id="logoutBtn">
+        Logout
+      </button>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- DASHBOARD SECTION -->
+      <div
+        id="dashboardSection"
+        class="section active-section"
+      >
+
+        <!-- TOP -->
+        <div class="top-bar">
+
+          <h2>
+            Welcome Back 👋
+          </h2>
+
+          <p>
+            Organize your workflow efficiently.
+          </p>
+
+        </div>
+
+
+        <!-- STATS -->
+        <div class="stats-grid">
+
+          <div class="stat-card">
+
+            <h3 id="totalTasks">
+              0
+            </h3>
+
+            <p>
+              Total Tasks
+            </p>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <h3 id="completedTasks">
+              0
+            </h3>
+
+            <p>
+              Completed
+            </p>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <h3 id="pendingTasks">
+              0
+            </h3>
+
+            <p>
+              Pending
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- ADD TASK FORM -->
+        <form
+          id="taskForm"
+          class="task-form"
+        >
+
+          <input
+            type="text"
+            id="title"
+            placeholder="Enter Task Title"
+            required
+          >
+
+          <textarea
+            id="description"
+            placeholder="Enter Task Description"
+          ></textarea>
+          <button type="submit">
+            Add Task
+          </button>
+
+        </form>
+
+      </div>
+
+
+      <!-- MY TASKS SECTION -->
+      <div
+        id="tasksSection"
+        class="section"
+      >
+
+        <div
+          id="taskList"
+          class="task-grid"
+        ></div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- JS -->
+  <script src="./js/dashboard.js"></script>
+<!-- FOOTER -->
+<footer class="dashboard-footer">
+
+  <p>
+    © 2026 TaskFlow. Built with ❤️ by praneeth
+  </p>
+
+</footer>
+</body>
+</html>
